@@ -1,12 +1,17 @@
+:root {
+  --jaune : #F7F6CF;
+  --bleu-pastel : #B6D8F2;
+  --bleu-fonce : #5784BA;
+  --rose : #F4CFDF;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
-  --jaune : #F7F6CF;
-  --bleu-pastel : #B6D8F2;
-  --bleu-fonce : #5784BA;
-  --rose : #F4CFDF;
+html, body {
+  overflow: hidden; /* Empêche le défilement */
 }

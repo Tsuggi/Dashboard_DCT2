@@ -15,7 +15,7 @@
     display: inline-block;
 
     >i {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         position: absolute;
         right: 20px;
         top: 50%;
@@ -25,6 +25,7 @@
 
     >input[type="search"] {
         width: 200px;
+        height: 2rem;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 9999px;
