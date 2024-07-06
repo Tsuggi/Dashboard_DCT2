@@ -2,6 +2,7 @@
 import TopBar from "@/components/top_bar/TopBar.vue";
 import SubTopBar from "@/components/sub_top_bar/SubTopBar.vue";
 import SideBar from "@/components/side_bar/SideBar.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
@@ -10,8 +11,8 @@ import SideBar from "@/components/side_bar/SideBar.vue";
 
   <div class="container">
       <SideBar />
-      <div class="test">
-        view
+      <div class="view-container">
+        <RouterView />
       </div>
   </div>
 
@@ -21,5 +22,10 @@ import SideBar from "@/components/side_bar/SideBar.vue";
 .container {
   display: flex;
   flex-direction: row;
+}
+
+.view-container {
+  background-color: var(--backcolor);
+  width: 100%;
 }
 </style>
