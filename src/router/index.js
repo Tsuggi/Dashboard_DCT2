@@ -6,17 +6,17 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "Home",
       component: MainLayout,
       children: [
         {
           path: "/dashboard",
-          name: "dashboard",
+          name: "Dashboard",
           component: () => import("@/views/DashboardView.vue"),
         },
         {
           path: "/tonnage",
-          name: "tonnage",
+          name: "Tonnage",
           component: () => import("@/views/TonnageView.vue"),
         },
       ],
