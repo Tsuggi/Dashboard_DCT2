@@ -16,3 +16,7 @@
 html, body {
   //overflow: hidden; /* Empêche le défilement */
 }
+
+.border-indigo-500 {
+  background-color: aqua;
+}

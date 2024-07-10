@@ -20,6 +20,16 @@ const router = createRouter({
           component: () => import("@/views/TonnageView.vue"),
         },
         {
+          path: "/taches",
+          name: "Tâches",
+          component: () => import("@/views/TasksView.vue"),
+        },
+        {
+          path: "/about",
+          name: "About",
+          component: () => import("@/views/AboutView.vue"),
+        },
+        {
           path: "/dechetterie",
           name: "Dechetterie",
           component: () => import("@/views/DechetterieView.vue"),
