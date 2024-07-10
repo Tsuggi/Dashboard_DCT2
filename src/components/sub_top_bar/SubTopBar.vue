@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="sub-container">
         <UserBloc />
         <PathBloc />
     </div>
@@ -11,9 +11,10 @@ import PathBloc from '@/components/sub_top_bar/components/PathBloc.vue'
 </script>
 
 <style scoped>
-.container {
+.sub-container {
     height: 2.5rem;
     display: flex;
+    background-color: white;
 }
 
 </style>

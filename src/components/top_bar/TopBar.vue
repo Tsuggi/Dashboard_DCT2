@@ -1,19 +1,24 @@
 <template>
     <header>
-        <div class="left-container">
-            <LogoAqta />
-            <BurgerIcon class="make-it-bigger"/>
+        <div class="topBar">
+            <div class="left-container">
+                <LogoAqta />
+                <BurgerIcon class="make-it-bigger"/>
+            </div>
+            <div class="right-container">
+                <SearchInput />
+                <NotificationIcon class="make-it-bigger"/>
+                <MessageIcon class="make-it-bigger"/>
+                <ParametersIcon class="make-it-bigger"/>
+            </div>
+            
         </div>
-        <div class="right-container">
-            <SearchInput />
-            <NotificationIcon class="make-it-bigger"/>
-            <MessageIcon class="make-it-bigger"/>
-            <ParametersIcon class="make-it-bigger"/>
-        </div>
+        <SubTopBar />
     </header>
 </template>
 
 <script setup>
+import SubTopBar from "@/components/sub_top_bar/SubTopBar.vue";
 import LogoAqta from '@/components/top_bar/components/LogoAqta.vue'
 import NotificationIcon from '@/components/top_bar/components/NotificationIcon.vue'
 import BurgerIcon from '@/components/top_bar/components/BurgerIcon.vue'
@@ -23,7 +28,16 @@ import SearchInput from '@/components/top_bar/components/SearchInput.vue'
 </script>
 
 <style scoped>
+
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;  
+
+}
+.topBar {
+    
     width: 100vw;
     height: 4rem;
     background-color: var(--bleu-pastel);
