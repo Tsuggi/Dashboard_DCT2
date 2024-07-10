@@ -6,6 +6,7 @@
                     <i :class="item.icon"></i>
                     {{ item.label }}
                     <i :class="item.posticon"></i>
+                    <h1 v-if="item.children">TEST</h1>
                 </li>
             </RouterLink>
         </ul>
@@ -34,22 +35,21 @@ const menu = reactive([
     {
         label: "En attente",
         icon: "pi pi-chevron-circle-left",
-        to: "/waiting"
+        to: "/dechetterie/belz"
     },
     {
         label: "Déchetteries",
         icon: "pi pi-trash",
         posticon: "pi pi-angle-right",
-        to: "/waiting",
+        to: "/dechetterie",
         children: [
-            { name: 'Belz' },
-            { name: 'Carnac' },
-            { name: 'Pluvigner' },
-            { name: 'Saint-Anne' },
-            { name: 'Quiberon' },
-            { name: 'Crach' },
+            { label: 'Belz' },
+            { label: 'Carnac' },
+            { label: 'Pluvigner' },
+            { label: 'Saint-Anne' },
+            { label: 'Quiberon' },
+            { label: 'Crach' },
         ]
-
     },
 ])
 

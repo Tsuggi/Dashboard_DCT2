@@ -19,6 +19,43 @@ const router = createRouter({
           name: "Tonnage",
           component: () => import("@/views/TonnageView.vue"),
         },
+        {
+          path: "/dechetterie",
+          name: "Dechetterie",
+          component: () => import("@/views/DechetterieView.vue"),
+          children: [
+            {
+              path: "/dechetterie/belz",
+              name: "Belz",
+              component: () => import("@/views/dct/BelzView.vue"),
+            },
+            {
+              path: "/dechetterie/carnac",
+              name: "Carnac",
+              component: () => import("@/views/dct/CarnacView.vue"),
+            },
+            {
+              path: "/dechetterie/saintanne",
+              name: "Saint Anne",
+              component: () => import("@/views/dct/SaintAnneView.vue"),
+            },
+            {
+              path: "/dechetterie/pluvigner",
+              name: "Pluvigner",
+              component: () => import("@/views/dct/PluvignerView.vue"),
+            },
+            {
+              path: "/dechetterie/quiberon",
+              name: "Quiberon",
+              component: () => import("@/views/dct/QuiberonView.vue"),
+            },
+            {
+              path: "/dechetterie/crach",
+              name: "Crach",
+              component: () => import("@/views/dct/CrachView.vue"),
+            },
+          ],
+        },
       ],
     },
   ],
