@@ -6,8 +6,14 @@
                     <i :class="item.icon"></i>
                     {{ item.label }}
                     <i :class="item.posticon"></i>
-                    <h1 v-if="item.children">TEST</h1>
                 </li>
+
+                <ul v-if="item.children">
+                    <RouterLink :to="dct.to" v-for="(dct, i) in item.children" :key="i" exact-active-class="exact-active-link">
+                        <li><em>{{ dct.label }}</em></li>
+                    </RouterLink>
+                </ul>
+
             </RouterLink>
         </ul>
     </div>
@@ -15,6 +21,7 @@
 
 <script setup>
 import { reactive } from 'vue'
+import { RouterLink } from 'vue-router';
 
 const menu = reactive([
     {
@@ -43,12 +50,12 @@ const menu = reactive([
         posticon: "pi pi-angle-right",
         to: "/dechetterie",
         children: [
-            { label: 'Belz' },
-            { label: 'Carnac' },
-            { label: 'Pluvigner' },
-            { label: 'Saint-Anne' },
-            { label: 'Quiberon' },
-            { label: 'Crach' },
+            { label: 'Belz', to: "/dechetterie/belz" },
+            { label: 'Carnac', to: '/dechetterie/carnac' },
+            { label: 'Pluvigner', to: '/dechetterie/pluvigner' },
+            { label: 'Saint-Anne', to: '/dechetterie/saintanne' },
+            { label: 'Quiberon', to: '/dechetterie/quiberon' },
+            { label: 'Crach', to: '/dechetterie/crach' },
         ]
     },
 ])
@@ -69,8 +76,6 @@ const menu = reactive([
         width: 100%;
 
         >a {
-            text-decoration: none;
-            color: black;
 
             >li {
                 width: 100%;
@@ -84,8 +89,18 @@ const menu = reactive([
                 border-bottom-left-radius: 9999px;
                 border: 0.5px solid var(--bleu-pastel);
             }
+
+            ul {
+                padding-left: 3.5rem;
+                font-size: small
+            }
         }
     }
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .exact-active-link {
