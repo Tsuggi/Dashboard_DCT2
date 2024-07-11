@@ -10,7 +10,7 @@ import { RouterView } from "vue-router";
   <div class="main-container">
       <SideBar />
       <div class="view-container">
-        <RouterView />
+          <RouterView />
       </div>
   </div>
 

@@ -50,9 +50,14 @@ const menu = reactive([
         to: "/taches"
     },
     {
+        label: "Pro",
+        icon: "pi pi-hammer",
+        to: "/pro"
+    },
+    {
         label: "En attente",
         icon: "pi pi-chevron-circle-left",
-        to: "/dechetterie/belz"
+        to: "/"
     },
     {
         label: "Déchetteries",
